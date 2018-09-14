@@ -12,11 +12,11 @@
 
   <div class="container">
     <div class="row" style="margin-top: 6%">
-      <button class="btn btn-info pull-right">
+      <button class="btn btn-info pull-right" style="background-color: #e3f2fd; color: #5AC8FA;">
         {% with totail_items=cart|length  %}
           {% if cart|length > 0 %}
             My Shopping order:
-            <a href="{% url 'cart:cart_detail' %}" style="color: #ffffff">
+            <a href="{% url 'cart:cart_detail' %}">
               {{ totail_items }} item {{ totail_items|pluralize }}, kshs. {{ cart.get_total_price }}
             </a>
           {% else %}
