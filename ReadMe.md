@@ -41,3 +41,5 @@ this e-commerce web site is an online shopping web site
 ###### make an order
 ![alt text](https://github.com/Mohamed-awad/E-Commerce/blob/master/shop/static/img/make_an_order.png)
 
+### References
+* I have created this project by following this taturial http://muva.co.ke/blog/lesson-1-building-e-commerce-shopping-cart-using-django-2-0-python-3-6/ but I have add some features and add some changes to the project 
