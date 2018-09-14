@@ -29,22 +29,15 @@ this e-commerce web site is an online shopping web site
 
 ### photo of site
 
-###### Login page
-![alt text](https://github.com/Mohamed-awad/My-Todo-List/blob/master/todoList/static/task/imgs/login.png)
+###### shopping products
+![alt text](https://github.com/Mohamed-awad/E-Commerce/blob/master/shop/static/img/shopping_products.png)
 
-###### Sign Up page
-![alt text](https://github.com/Mohamed-awad/My-Todo-List/blob/master/todoList/static/task/imgs/signup.png)
+###### specefic product
+![alt text](https://github.com/Mohamed-awad/E-Commerce/blob/master/shop/static/img/see_specefic_product.png)
 
-###### tasks_medo_user
-![alt text](https://github.com/Mohamed-awad/My-Todo-List/blob/master/todoList/static/task/imgs/medo_tasks.png)
+###### see your shopping cart
+![alt text](https://github.com/Mohamed-awad/E-Commerce/blob/master/shop/static/img/my_shopping_cart.png)
 
-###### api_tasks_medo
-![alt text](https://github.com/Mohamed-awad/My-Todo-List/blob/master/todoList/static/task/imgs/Api_Task_of_medo.png)
-
-###### api_users
-![alt text](https://github.com/Mohamed-awad/My-Todo-List/blob/master/todoList/static/task/imgs/api_users.png)
-
-
-
-
+###### make an order
+![alt text](https://github.com/Mohamed-awad/E-Commerce/blob/master/shop/static/img/make_an_order.png)
 
