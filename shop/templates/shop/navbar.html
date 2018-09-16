@@ -27,9 +27,15 @@
       <li class="nav-item">
         <a class="nav-link" href="{% url 'shop:product_list' %}">Home <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="{% url 'cart:cart_detail' %}">My Cart</a>
-      </li>
+      {% if request.user.is_authenticated %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'cart:cart_detail' %}">My Cart</a>
+        </li>
+      {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'accounts:login' %}">My Cart</a>
+        </li>
+      {% endif %}
     </ul>
     <ul class="navbar-nav">
       {% if request.user.is_authenticated %}
@@ -37,14 +43,14 @@
           <a href="#" class="nav-link">{{ request.user.username }}</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">logout</a>
+          <a href="{% url 'accounts:logout' %}" class="nav-link">logout</a>
         </li>
       {% else %}
         <li class="nav-item">
-          <a href="#" class="nav-link">Sign in</a>
+          <a href="{% url 'accounts:login' %}" class="nav-link">Sign in</a>
         </li>
         <li class="nav-item">
-          <a href="#" class="nav-link">Sign up</a>
+          <a href="{% url 'accounts:signup' %}" class="nav-link">Sign up</a>
         </li>
       {% endif %}
     </ul>

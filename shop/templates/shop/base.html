@@ -9,24 +9,24 @@
 </head>
 <body>
   {% include 'shop/navbar.html' %}
-
-  <div class="container">
-    <div class="row" style="margin-top: 6%">
-      <button class="btn btn-info pull-right" style="background-color: #e3f2fd; color: #5AC8FA;">
-        {% with totail_items=cart|length  %}
-          {% if cart|length > 0 %}
-            My Shopping order:
-            <a href="{% url 'cart:cart_detail' %}">
-              {{ totail_items }} item {{ totail_items|pluralize }}, kshs. {{ cart.get_total_price }}
-            </a>
-          {% else %}
-            Your Cart is Empty.
-          {% endif %}
-        {% endwith %}
-      </button>
+  {% if request.user.is_authenticated %}
+    <div class="container">
+      <div class="row" style="margin-top: 6%">
+        <button class="btn btn-info pull-right" style="background-color: #e3f2fd; color: #5AC8FA;">
+          {% with totail_items=cart|length  %}
+            {% if cart|length > 0 %}
+              My Shopping order:
+              <a href="{% url 'cart:cart_detail' %}">
+                {{ totail_items }} item {{ totail_items|pluralize }}, kshs. {{ cart.get_total_price }}
+              </a>
+            {% else %}
+              Your Cart is Empty.
+            {% endif %}
+          {% endwith %}
+        </button>
+      </div>
     </div>
-  </div>
-
+  {% endif %}
   {% block content %}
 
   {% endblock %}

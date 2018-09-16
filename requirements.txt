@@ -2,5 +2,8 @@ Django==2.1.1
 django-filter==2.0.0
 djangorestframework==3.8.2
 Markdown==2.6.11
+packaging==17.1
 Pillow==5.2.0
+pyparsing==2.2.0
 pytz==2018.5
+six==1.11.0

@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'shop',
     'cart',
     'orders',
+    'accounts',
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -128,3 +129,8 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'products/')
 
 CART_SESSION_ID = 'cart'
+
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = 'shop:product_list'
