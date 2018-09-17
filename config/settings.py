@@ -31,10 +31,11 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'social_django',
+    'accounts',
     'shop',
     'cart',
     'orders',
-    'accounts',
     'rest_framework',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -52,6 +53,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'social_django.middleware.SocialAuthExceptionMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -68,10 +70,24 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'cart.context_processors.cart',
+                'social_django.context_processors.backends',
+                'social_django.context_processors.login_redirect',
             ],
         },
     },
 ]
+
+AUTHENTICATION_BACKENDS = (
+  'social_core.backends.open_id.OpenIdAuth',  # for Google authentication
+  'social_core.backends.google.GoogleOpenId',  # for Google authentication
+  'social_core.backends.google.GoogleOAuth2',  # for Google authentication
+  'social_core.backends.github.GithubOAuth2',
+  'social_core.backends.twitter.TwitterOAuth',
+  'social_core.backends.facebook.FacebookOAuth2',
+
+  'django.contrib.auth.backends.ModelBackend',
+  'social_core.backends.instagram.InstagramOAuth2',
+)
 
 WSGI_APPLICATION = 'config.wsgi.application'
 
@@ -134,3 +150,21 @@ LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = 'shop:product_list'
+
+
+# github keys
+SOCIAL_AUTH_GITHUB_KEY = 'b17986d65f772cfa5204'
+SOCIAL_AUTH_GITHUB_SECRET = 'c0787d07512319859b0b8c7b5286b05ac0d2e44e'
+
+# facebook keys
+SOCIAL_AUTH_FACEBOOK_KEY = '314700825747438'
+SOCIAL_AUTH_FACEBOOK_SECRET = '670de008bb0f537f268fc1bc12394bcc'
+
+# google+ keys
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '127248638826-hiku5idecj4buhqtepqvlanum3n1g3eu.apps.googleusercontent.com'
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = 'XQ_FJOlPqNRrsrDjrO_ZSHdr'
+
+# intagram keys
+SOCIAL_AUTH_INSTAGRAM_KEY = '9e89b37078fa4000a8c0ae76c3f4fd86'
+SOCIAL_AUTH_INSTAGRAM_SECRET = 'd47776a5f42d4caeb59b7fbdd1dd2e13'
+
