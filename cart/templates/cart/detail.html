@@ -68,7 +68,13 @@
       </table>
       <p class="text-right">
         <a href="{% url 'shop:product_list' %}" class="btn btn-outline-info"> Continue Shopping</a>
-        <a href="{% if cart|length > 0 %} {% url 'orders:order_create' %} {% endif %}" class="btn btn-outline-info">Checkout</a>
+        <a href="{% if request.user.is_authenticated %}
+                   {% if cart|length > 0 %}
+                     {% url 'orders:order_create' %}
+                   {% endif %}
+                 {% else %}
+                   {% url 'accounts:login' %}
+                 {% endif %}" class="btn btn-outline-info">Checkout</a>
       </p>
     </div>
   </div>

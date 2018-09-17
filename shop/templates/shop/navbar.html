@@ -27,15 +27,9 @@
       <li class="nav-item">
         <a class="nav-link" href="{% url 'shop:product_list' %}">Home <span class="sr-only">(current)</span></a>
       </li>
-      {% if request.user.is_authenticated %}
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'cart:cart_detail' %}">My Cart</a>
-        </li>
-      {% else %}
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'accounts:login' %}">My Cart</a>
-        </li>
-      {% endif %}
+      <li class="nav-item">
+        <a class="nav-link" href="{% url 'cart:cart_detail' %}">My Cart</a>
+      </li>
     </ul>
     <ul class="navbar-nav">
       {% if request.user.is_authenticated %}
