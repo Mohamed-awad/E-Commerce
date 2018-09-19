@@ -10,6 +10,7 @@ this e-commerce web site is an online shopping web site
 * you can remove product from your cart
 * you can make an order for your items in your cart
 * you can signup/login/logout with github, facebook, google, instagram
+* you can see api for all apps in this project
 
 ## Install
 
@@ -47,6 +48,12 @@ this e-commerce web site is an online shopping web site
 
 ###### Login Page
 ![alt text](https://github.com/Mohamed-awad/E-Commerce/blob/master/shop/static/img/login_page.png)
+
+###### Users Api Page
+![alt text](https://github.com/Mohamed-awad/E-Commerce/blob/master/shop/static/img/users_api.png)
+
+###### User Api Page
+![alt text](https://github.com/Mohamed-awad/E-Commerce/blob/master/shop/static/img/user_detail_api.png)
 
 ### References
 * this taturial http://muva.co.ke/blog/lesson-1-building-e-commerce-shopping-cart-using-django-2-0-python-3-6/ is the base for build this project 
