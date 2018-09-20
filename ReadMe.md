@@ -55,5 +55,15 @@ this e-commerce web site is an online shopping web site
 ###### User Api Page
 ![alt text](https://github.com/Mohamed-awad/E-Commerce/blob/master/shop/static/img/user_detail_api.png)
 
+###### product list Api Page
+![alt text](https://github.com/Mohamed-awad/E-Commerce/blob/master/shop/static/img/product_list_api.png)
+
+###### category list Api Page
+![alt text](https://github.com/Mohamed-awad/E-Commerce/blob/master/shop/static/img/category_list_api.png)
+
+###### orders list Api Page
+![alt text](https://github.com/Mohamed-awad/E-Commerce/blob/master/shop/static/img/order_list_api.png)
+
+
 ### References
 * this taturial http://muva.co.ke/blog/lesson-1-building-e-commerce-shopping-cart-using-django-2-0-python-3-6/ is the base for build this project 

@@ -1,9 +1,31 @@
 from django.shortcuts import render
-from .models import OrderItem
+from .models import OrderItem, Order
 from .forms import OrderCreateForm
 from cart.cart import Cart
 from django.contrib.auth.decorators import login_required
-# Create your views here.
+from rest_framework import generics
+from .serializers import OrderSerializer, OrderItemSerializer
+
+
+class OrderList(generics.ListAPIView):
+  queryset = Order.objects.all()
+  serializer_class = OrderSerializer
+
+
+class OrderDetail(generics.RetrieveUpdateDestroyAPIView):
+  queryset = OrderItem.objects.all()
+  serializer_class = OrderItemSerializer
+
+
+class OrderItemList(generics.ListAPIView):
+  queryset = OrderItem.objects.all()
+  serializer_class = OrderItemSerializer
+
+
+class OrderItemDetail(generics.RetrieveUpdateDestroyAPIView):
+  queryset = Order.objects.all()
+  serializer_class = OrderSerializer
+
 
 @login_required
 def order_create(request):
@@ -24,3 +46,4 @@ def order_create(request):
   else:
     form = OrderCreateForm()
     return render(request, 'orders/order/create.html', {'form': form})
+
