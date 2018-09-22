@@ -3,6 +3,18 @@ from .models import Category, Product
 from cart.forms import CartAddProductForm
 from .serializers import CategorySerializer, ProductSerializer
 from rest_framework import generics
+from django.views.generic.edit import CreateView
+from .forms import ProductCreateForm
+from django.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin
+
+
+class AddProduct(LoginRequiredMixin, CreateView):
+  login_url = 'accounts:login'
+  form_class = ProductCreateForm
+  template_name = 'shop/products/create.html'
+  http_method_names = ('post', 'get')
+  success_url = reverse_lazy('shop:product_list')
 
 
 class CategoryList(generics.ListCreateAPIView):
@@ -30,8 +42,8 @@ def product_list(request, category_slug=None):
   categories = Category.objects.all()
   products = Product.objects.filter(available=True)
   if category_slug:
-    category = get_object_or_404(Category, slug= category_slug)
-    products = Product.objects.filter(category= category)
+    category = get_object_or_404(Category, slug=category_slug)
+    products = Product.objects.filter(category=category)
 
   context = {
     'category': category,

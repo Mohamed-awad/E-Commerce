@@ -1,12 +1,12 @@
 {% extends 'shop/base.html' %}
 {% load static %}
 {% block title %}
-  Sign up Page
+  Create New Product
 {% endblock %}
 
 {% block content %}
-  <h2>Sign up</h2>
-  <form method="post">
+  <h2>add new product</h2>
+  <form method="post" enctype="multipart/form-data">
     {% csrf_token %}
     {% for field in form %}
       <p>
@@ -20,6 +20,7 @@
         {% endfor %}
       </p>
     {% endfor %}
-    <button class="btn btn-outline-info" type="submit">Sign up</button>
+    <button class="btn btn-outline-info" type="submit">add product</button>
   </form>
+  <br><br><br>
 {% endblock %}
