@@ -9,6 +9,7 @@ this e-commerce web site is an online shopping web site
 * you can add any product to your cart
 * you can remove product from your cart
 * you can make an order for your items in your cart
+* you can add your product for sell
 * you can signup/login/logout with github, facebook, google, instagram
 * you can see api for all apps in this project
 
