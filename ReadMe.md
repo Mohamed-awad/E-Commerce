@@ -23,6 +23,7 @@ this e-commerce web site is an online shopping web site
 * download the project 
 * open the project in terminal by press `Ctrl-Alt+T`
 * install virtualenv `pip3 install virtualenv` 
+* init your virtualenv `virtualenv ecom_env`
 * active virtualenv `source env/bin/activate`
 * install required packages on virtualenv `pip3 install -r requirements.txt`
 * run server `python3 manage.py runserver`
