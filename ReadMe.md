@@ -24,8 +24,9 @@ this e-commerce web site is an online shopping web site
 * open the project in terminal by press `Ctrl-Alt+T`
 * install virtualenv `pip3 install virtualenv` 
 * init your virtualenv `virtualenv ecom_env`
-* active virtualenv `source env/bin/activate`
+* active virtualenv `source ecom_env/bin/activate`
 * install required packages on virtualenv `pip3 install -r requirements.txt`
+* migrate models to create tables in db `python3 manage.py migrate`
 * run server `python3 manage.py runserver`
 * open browser on this link `http://127.0.0.1:8000/`
 * press on any product to see more details about it
