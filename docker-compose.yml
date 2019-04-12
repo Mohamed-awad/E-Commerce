@@ -1,0 +1,15 @@
+version: "2"
+services:
+  django:
+    container_name: django_e-commerce
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: docker_django_e-commerce
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/django_e-commerce
+    ports:
+      - "8000:8000"
+

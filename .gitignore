@@ -1,2 +1,4 @@
+.idea/
 *.sqlite3
 *.py[cod]
+ecom_env/
