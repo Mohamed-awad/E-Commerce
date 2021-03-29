@@ -10,7 +10,7 @@ Markdown==2.6.11
 oauthlib==2.1.0
 packaging==17.1
 Pillow==5.2.0
-Pygments==2.2.0
+Pygments==2.7.4
 PyJWT==1.6.4
 pyparsing==2.2.0
 python3-openid==3.1.0
